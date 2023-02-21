@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
-import {Navigate } from 'react-router-dom'
+import {Redirect } from 'react-router-dom'
 import {formatPet} from '../utils/helpers'
 
 
@@ -8,7 +8,7 @@ class EventDetails extends Component {
   render () {
     if(!this.props.authedUser)
     {
-      return <Navigate 
+      return <Redirect 
         to={{
           pathname: '/',
           state: { from: this.props.location.pathname }
@@ -16,7 +16,7 @@ class EventDetails extends Component {
       />
     }
     if(!this.props.isValidPet) {
-      return <Navigate  to='/404' />
+      return <Redirect  to='/404' />
     }
 
     const { name, avatar, breed, age, gender, ownerDetails, vaccinationDetails,votes} = this.props.pet

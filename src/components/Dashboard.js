@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Redirect} from 'react-router-dom'
+import {Redirect } from 'react-router-dom'
 import Pets from './Pets'
 
 
@@ -20,14 +20,14 @@ class Dashboard extends Component {
 
     if(!authedUser)
     {
-      return <Redirect
+      return <Redirect 
         to={{
           pathname: '/',
           state: { from: '/home' }
         }}
       />
 
-      //return <Redirect to='/'/>
+      //return <Redirect  to='/'/>
     }
     return (
       <div className='dashboard-content'>

@@ -1,5 +1,5 @@
 import React, {Component,Fragment} from 'react'
-import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import {connect} from 'react-redux'
 //React Redux loading bar
 import LoadingBar from 'react-redux-loading-bar'
@@ -31,7 +31,7 @@ class App extends Component {
             {this.props.loading === true
               ? null
               : <div className='app-contents'>
-                  <Routes>
+                  <Switch>
                     <Route path='/' exact component={Home}/>
                     <Route path='/signin' exact component={Login}/>
                     <Route path='/about' exact component={About}/>
@@ -39,7 +39,7 @@ class App extends Component {
                     <Route path='/event/:id' exact component={EventDetails}/>
                     <Route path='/404' component = {PageNotFound}/>
                     <Route component={Home} />
-                  </Routes>
+                  </Switch>
                 </div>
             }
             <Footer />
