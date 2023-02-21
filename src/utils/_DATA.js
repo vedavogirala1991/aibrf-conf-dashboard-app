@@ -1,3 +1,15 @@
+let events = {
+  sixthtriennialconference : {
+    id : 'sixthtriennialconference',
+    title : '6th Triennial Conference',
+    description : 'On the ocassion of 6th Triennial Conference, wherein activities of the organisation and articles concerning to retirees, senior citizens, banking industry and on other relevant topics are proposed to be discussed is scheduled from 24th February to 27th February, 2023. Delegates and Observers who wish to participate are requested to provide your details through the below registration link',
+    startDate : "25th February, 2023",
+    endDate : "27th February, 2023",
+    action : 'Register'
+  }
+}
+
+
 let users = {
   sarahedo: {
     id: 'sarahedo',
@@ -284,5 +296,12 @@ export function _getPets () {
   console.log('_getPets', pets);
   return new Promise((res, rej) => {
     setTimeout(() => res({...pets}), 1000)
+  })
+}
+
+export function _getEvents () {
+  console.log('_getEvents', events);
+  return new Promise((res, rej) => {
+    setTimeout(() => res({...events}), 1000)
   })
 }

@@ -1,16 +1,11 @@
-export const formatPet = (pet,users,authedUser) => {
-  const { id,breed, age, gender,imageURL,vaccinationDetails, votes} = pet
-  const { name, avatarURL } = users[pet.owner]
-
+export const formatEvent = (event) => {
+  console.log('inside formatEvent', event)
+  const {id, title, description, startDate, endDate} = event
   return {
-    name : pet.name,//Pet Name
-    id,//Pet Id
-    breed,//Time posted
-    age,//Option One
-    gender,//Option Two
-    avatar: imageURL,//Author profile image
-    ownerDetails: users[authedUser],
-    vaccinationDetails,
-    votes
+    id,
+    title,
+    description,
+    startDate, 
+    endDate,
   }
 }

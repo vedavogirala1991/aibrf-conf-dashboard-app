@@ -1,14 +1,14 @@
 import {
   _getUsers,
-  _getPets,
+  _getEvents,
 } from './_DATA.js'
 
 export function getInitialData () {
   return Promise.all([
     _getUsers(),
-    _getPets(),
-  ]).then(([users, pets]) => ({
+    _getEvents(),
+  ]).then(([users, events]) => ({
     users,
-    pets,
+    events,
   }))
 }

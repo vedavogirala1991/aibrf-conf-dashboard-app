@@ -32,7 +32,7 @@ class App extends Component {
               ? null
               : <div className='app-contents'>
                   <Switch>
-                    <Route path='/' exact component={Home}/>
+                    <Route path='/home' exact component={Home}/>
                     <Route path='/signin' exact component={Login}/>
                     <Route path='/about' exact component={About}/>
                     <Route path='/register' exact component={Register}/>
@@ -50,11 +50,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({users,authedUser }) => {
+const mapStateToProps = ({users,authedUser,events}) => {
   const loading = Object.keys(users).length === 0 ? true : false
   return {
     loading,
     authedUser,
+    events,
   }
 }
 

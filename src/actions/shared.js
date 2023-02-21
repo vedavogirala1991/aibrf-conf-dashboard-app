@@ -3,7 +3,7 @@ import {
 import {
   recieveUsers} from './users'
 import {
-    recievePets} from './pets'
+    recieveEvents} from './events'
 //import {setAuthedUser} from './authedUser'
 import {showLoading,hideLoading} from 'react-redux-loading-bar'
 
@@ -16,9 +16,9 @@ export const handleInitialData = () => {
   return (dispatch) => {
     dispatch(showLoading())
     return getInitialData()
-      .then(({users,pets}) => {
+      .then(({users,events}) => {
         dispatch(recieveUsers(users))
-        dispatch(recievePets(pets))
+        dispatch(recieveEvents(events))
         //dispatch(setAuthedUser(AUTHED_ID))
         dispatch(hideLoading())
     })
