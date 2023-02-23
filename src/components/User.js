@@ -1,32 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {connect} from 'react-redux'
+import { FaPlus, FaMinus } from 'react-icons/fa';
 import { formatEvent } from '../utils/helpers'
 import {Link} from 'react-router-dom'
 
-class User extends React.Component {
+const User = (props) => {
 
-  user = this.props.user
+  const user = props.user
+  const [toggle, setToggle] = useState(false)
 
-  viewPoll = (e,id) => {
+  const viewPoll = (e,id) => {
     e.preventDefault()
     // this.props.history.push(`/event/${id}`)
   }
 
-  render() {
-    return (
-      <div className='user-short-details'>
-        <div className='user-table-header'>
-          <div className='user-details-column'>{this.user.name}</div>
-          <div className='user-details-column'>{this.user.staffCode}</div>
-          <div className='user-details-column-mobile'>{this.user.mobile}</div>
-          <div className='user-details-column-gender'>{this.user.gender}</div>
-          <div className='user-details-column-role'>{this.user.role}</div>
-          <div className='user-details-column'>Expand</div>
+  return (
+    <div className='user-short-details'>
+      <div className='user-details-table-header'>
+        <div className='user-details-column-name'>{user.name}</div>
+        <div className='user-details-column-staffcd'>{user.staffCode}</div>
+        <div className='user-details-column-mobile'>{user.mobile}</div>
+        <div className='user-details-column-gender'>{user.gender}</div>
+        <div className='user-details-column-role'>{user.role}</div>
+        <div className='user-details-column-expand'>
+          <button className='user-expand-button' onClick={() => setToggle(!toggle)}>
+            {!toggle ? <FaPlus/>: <FaMinus/>}
+          </button>
         </div>
-        <div>Remaining details</div>
       </div>
-    )
-  }
+      {toggle && <div>Remaining details</div>}
+    </div>
+  )
+
 }
 
 const mapStateToProps = ({users,authedUser,events},props) => {

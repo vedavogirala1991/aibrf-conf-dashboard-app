@@ -14,22 +14,23 @@ class EventDetails extends Component {
         <div className='event-details-container'>
           <div className='event-details-flex'>
             <div className='event-schedule-details'>
-              <p className='aibrf-event-intro-highlight'>{this.props.event.title}</p>
-              <p className='aibrf-event-intro-2'>From : 
+              <h2 className='aibrf-event-intro-highlight'>{this.props.event.title}</h2>
+              <h4 className='aibrf-event-intro-2'>From : 
                 <span className='event-aibrf-intro'> {this.props.event.startDate} </span>
                 to :  <span className='event-aibrf-intro'> {this.props.event.endDate}</span>
-              </p>
-              <p className='event-short-desc'>
+              </h4>
+              <h4 className='event-short-desc'>
                 {this.props.event.description}
-              </p>
-              <div className='event-users-registered'>Registered Users
+              </h4>
+              <div className='event-users-registered'>
+                <h4 className='reg-user-heading'>Registered Users</h4>
                 <div className='user-table-header'>
                   <div className='user-details-column'>Name</div>
                   <div className='user-details-column'>Staff Number</div>
                   <div className='user-details-column'>Mobile Number</div>
                   <div className='user-details-column'>Gender</div>
                   <div className='user-details-column'>Role</div>
-                  <div className='user-details-column'>Expand</div>
+                  <div className='user-details-column-exhead'></div>
                 </div>
                 <ul className='question'>
                   {this.props.regUserIds &&

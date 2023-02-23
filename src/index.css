@@ -1649,16 +1649,24 @@ ul {
 }
 
 .event-users-registered {
-  
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .user-short-details {
   width: 90%;
-  background: #f8d880;
+  background: #b1d2f1;
   border-radius: 20px;
-  margin: 0px 20px 20px 10px;
-  padding: 20px;
+  margin: 0px 40px 20px 20px;
+  padding: 30px 50px 20px 0px;
   padding-bottom: 30px;
+}
+
+.reg-user-heading {
+  padding: 20px;
 }
 
 .user-table-header {
@@ -1666,6 +1674,20 @@ ul {
 }
 
 .user-details-column {
+  flex : 1;
+  margin-left: -5px;
+}
+
+.user-details-column-exhead {
+  flex : 1;
+  margin-left: -10px;
+}
+
+.user-details-column-name {
+  flex : 1;
+}
+
+.user-details-column-staffcd {
   flex : 1;
 }
 
@@ -1684,5 +1706,20 @@ ul {
 .user-details-column-role {
   flex : 1;
   margin-left: 10px;
+  padding-left: 60px;
+}
+
+.user-details-column-expand {
+  flex : 1;
+  align-items: right;
+}
+
+.user-details-table-header {
+  display: flex;
+  margin-left: 30px;
+  margin-right: -40px;
   padding-left: 20px;
+}
+
+.user-expand-button {
 }
