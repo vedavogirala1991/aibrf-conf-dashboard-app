@@ -1,21 +1,36 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { formatEvent } from '../utils/helpers'
+import {Link} from 'react-router-dom'
 
-const Event = (props) => {
+class Event extends React.Component {
 
-  const event = props.event
-  console.log('Single event details : ',event)
-  return (
-    <div>
-      <p className='aibrf-home-intro-highlight'>{event.title}</p>
-      <p className='aibrf-event-intro-2'>From : 
-        <span className='event-aibrf-intro'> {event.startDate} </span>
-        to :  <span className='event-aibrf-intro'> {event.endDate}</span>
-      </p>
-      {event.description}
-    </div>
-  )
+  event = this.props.event
+
+  viewPoll = (e,id) => {
+    e.preventDefault()
+    // this.props.history.push(`/event/${id}`)
+  }
+
+  render() {
+    return (
+      <div className='event-low-details'>
+        <p className='aibrf-event-intro-highlight'>{this.event.title}</p>
+        <p className='aibrf-event-intro-2'>From : 
+          <span className='event-aibrf-intro'> {this.event.startDate} </span>
+          to :  <span className='event-aibrf-intro'> {this.event.endDate}</span>
+        </p>
+        <p className='event-short-desc'>
+        {this.event.description.length>150 ? this.event.description.substring(0,150) : this.event.description}
+        <Link to={`/event/${this.event.id}`}>...view more</Link>
+        <button
+            onClick={(e)=>this.viewPoll(e,this.event.id)}>
+            View Poll
+          </button>
+        </p>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = ({users,authedUser,events},props) => {

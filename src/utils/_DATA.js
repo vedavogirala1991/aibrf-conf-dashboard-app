@@ -1,11 +1,38 @@
 let events = {
-  sixthtriennialconference : {
-    id : 'sixthtriennialconference',
+  sixthtriennialconferenceFeb2023 : {
+    id : 'sixthtriennialconferenceFeb2023',
     title : '6th Triennial Conference',
     description : 'On the ocassion of 6th Triennial Conference, wherein activities of the organisation and articles concerning to retirees, senior citizens, banking industry and on other relevant topics are proposed to be discussed is scheduled from 24th February to 27th February, 2023. Delegates and Observers who wish to participate are requested to provide your details through the below registration link',
     startDate : "25th February, 2023",
     endDate : "27th February, 2023",
-    action : 'Register'
+    action : 'Register',
+    registeredUsers : []
+  }
+}
+
+let aibrfUsers = {
+  '4153' : {
+    id : '',
+    name : '',
+    mobile : '',
+    staffCode : '',
+    pfNo : '',
+    role : '',
+    spouseAccompanying : '',
+    paymentDetails : {
+
+    },
+    arrivalDetails : {
+      arrivalDate : '',
+      arrivalTime : '',
+    },
+    departureDetails : {
+      departureDate : '',
+      departueTime : '',
+    },
+    stayDetails : {
+
+    }, 
   }
 }
 
