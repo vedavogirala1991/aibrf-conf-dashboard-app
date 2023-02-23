@@ -47,82 +47,41 @@ white-space: nowrap;
 // }
 `;
 
-const NavBtn = styled.nav`
-display: flex;
-align-items: center;
-font-size: 20px;
-padding-left: 30px;
-margin-right: 50px;
-/* Third Nav */
-justify-content: flex-end;
-width: 100vw;
-// @media screen and (max-width: 768px) {
-// 	display: none;
-// }
-`;
 
-const NavBtnLink = styled(Link)`
-border-radius: 4px;
-background: #ff7f27;
-padding: 10px 22px;
-margin-top: 10px;
-margin-right: 60px;
-color: #000000;
-outline: none;
-border: none;
-cursor: pointer;
-transition: all 0.2s ease-in-out;
-text-decoration: none;
-/* Second Nav */
-&:hover {
-	transition: all 0.2s ease-in-out;
-	background: #fff;
-  font-weight: bold;
-}
-`;
 
 class Nav extends Component {
   render () {
-    const {username,avatar} = this.props
+    const {username} = this.props
     return (
-      <div className='nav-bar'>
-        <div className='aibrf-logo-and-title'>
-          <p className='aibrf-title'>AIBRF</p>
-          <p className='aibrfconf-title'>Conference Dashboard</p>
+      <div className='top-nav'>
+        <div className='top-nav-sections'>
+          <div className='aibrf-logo-and-title'>
+            <p className='aibrf-title'>AIBRF</p>
+            <p className='aibrfconf-title'>Conference Dashboard</p>
+          </div>
         </div>
-        <NavMenu>
-          <NvLink to='/home' activeStyle>
-            Home
-          </NvLink>
-          <NvLink to='/about' activeStyle>
-            About
-          </NvLink>
-          <NvLink to='/register' activeStyle>
-            Register for event
-          </NvLink>
-        </NavMenu>
-        {this.props.username==null ?
-
-          (<NavBtn>
-            <NavBtnLink to='/signin'>Sign in</NavBtnLink>
-          </NavBtn>) :
-
-          (<nav className='nav'>
-              <div className='user-nav'>
-                <ul>
-                  <li className='user-actions'>
-                    <span className='username'>{username}</span>
-                    <img
-                      src={avatar}
-                      alt={`Avatar of ${username}`}
-                      className='nav-avatar'/>
-                    <Link className='user-logout' to='/' exact activeClassName='active'>
-                      Logout
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-          </nav>)}
+        <div className='top-nav-section2'>
+          Home
+        </div>
+        <div className='top-nav-section2'>
+          About 
+        </div>
+        <div className='top-nav-section2'>
+          Register for Events
+        </div>
+        <div className='top-nav-section3'>
+          {this.props.username==null ?
+            <Link className='user-logout' to='/' exact activeClassName='active'>
+            Sign in 
+            </Link> : 
+            <div>
+              <span className='username'>{username}</span>
+              <Link className='user-logout' to='/' exact activeClassName='active'>
+                Logout
+              </Link>
+            </div>
+          }
+        </div>
       </div>
     )
   }
@@ -134,9 +93,6 @@ const mapStateToProps = ({ users,authedUser }) => {
   return {
     username: authedUser
       ? users[authedUser].name
-      : null,
-    avatar : authedUser
-      ? users[authedUser].avatarURL
       : null,
   }
 }

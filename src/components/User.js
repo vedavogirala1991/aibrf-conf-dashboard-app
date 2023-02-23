@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {connect} from 'react-redux'
 import { FaPlus, FaMinus } from 'react-icons/fa';
-import { formatEvent } from '../utils/helpers'
+import { formatTime } from '../utils/helpers'
 import {Link} from 'react-router-dom'
 
 const User = (props) => {
@@ -46,10 +46,10 @@ const User = (props) => {
           </div>
           <div className='more-details-section'>
             {user.arrivalDetails &&
-              <p><b className='bold-details'>Arrival Date & Time : </b>{user.arrivalDetails.arrivalDate} : {user.arrivalDetails.arrivalTime}</p>
+              <p><b className='bold-details'>Arrival Date & Time : </b>{user.arrivalDetails.arrivalDate} : {formatTime(user.arrivalDetails.arrivalTime)}</p>
             }
             {user.departureDetails &&
-              <p><b className='bold-details'>Departure Date & Time : </b>{user.departureDetails.departureDate} : {user.departureDetails.departureTime}</p>
+              <p><b className='bold-details'>Departure Date & Time : </b>{user.departureDetails.departureDate} : {formatTime(user.departureDetails.departureTime)}</p>
             }
             {user.stayDetails ?
               <p><br/><b className='bold-details'> Hotel Name : </b>{user.stayDetails.hotelName} <br/>

@@ -1447,7 +1447,6 @@ ul {
 .aibrf-logo-and-title {
   margin-top: 2px;
   margin-left: 50px;
-  width: 600px;
 }
 
 .aibrf-care-text {
@@ -1758,6 +1757,37 @@ ul {
 
 .bold-details {
   font-weight: 500;
+}
+
+.top-nav {
+  background: #161616;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-nav-sections {
+  flex : 1;
+  color: #808080;
+  display: contents;
+  vertical-align: bottom;
+}
+
+.top-nav-section2 {
+  flex : 1;
+  color: #808080;
+  margin-top: 80px;
+  margin-left: 100px;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+.top-nav-section3 {
+  flex : 1;
+  color: #808080;
+  margin-top: 80px;
+  margin-left: 20px;
+  vertical-align: bottom;
 }
 
 .emergency-details {

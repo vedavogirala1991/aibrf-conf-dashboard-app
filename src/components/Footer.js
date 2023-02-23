@@ -80,7 +80,7 @@ return (
     			<FooterLink href="#">Hyderabad</FooterLink>
     		</Column>
   		</Row>
-      <p className='tnc'>@2022 All Rights Reserved. AIBRF Hyderabad Conference Dashboard is a prototype that is used to broadcast upcoming conference event news and allow delegates and observers to register for events.<br/>
+      <p className='tnc'>@2023 All Rights Reserved. AIBRF Hyderabad Conference Dashboard is a prototype that is used to broadcast upcoming conference event news and allow delegates and observers to register for events.<br/>
       <span className='tnc-ul'>Cookie Preferences</span>, <span className='tnc-ul'>Privacy</span> and <span className='tnc-ul'>Terms</span>.</p>
   	</Container>
 	</Box>
