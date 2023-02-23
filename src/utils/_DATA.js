@@ -6,86 +6,349 @@ let events = {
     startDate : "25th February, 2023",
     endDate : "27th February, 2023",
     action : 'Register',
-    registeredUsers : []
+    registeredUsers : ['1','2','3','4','5','6','7','8','9','10','11','12','13']
   }
 }
 
-let aibrfUsers = {
-  '4153' : {
-    id : '',
-    name : '',
-    mobile : '',
-    staffCode : '',
-    pfNo : '',
-    role : '',
-    spouseAccompanying : '',
-    paymentDetails : {
-
+let users = {
+  '1' : {
+    id : '1',
+    name : 'Kunta Hari Babu',
+    mobile : 9848014081,
+    staffCode : 4153,
+    pfNo : 349674,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {
+      ecName : 'YLN Kumari',
+      ecNumber : 9849050969,
+      ecRelation : 'Wife', 
     },
     arrivalDetails : {
-      arrivalDate : '',
-      arrivalTime : '',
+      arrivalDate : '25-02-23',
+      arrivalTime : '09:00',
     },
     departureDetails : {
-      departureDate : '',
-      departueTime : '',
+      departureDate : '28-02-23',
+      departueTime : '08:00',
     },
     stayDetails : {
 
     }, 
-  }
-}
+  },
+  '2' : {
+    id : '2',
+    name : 'D.Nanharam',
+    mobile : 9000434443,
+    staffCode : 4165,
+    pfNo : 318348,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {
+      ecName : 'D Kusa Ram',
+      ecNumber : 9845499199,
+      ecRelation : 'Son', 
+    },
+    arrivalDetails : {
+      arrivalDate : '25-02-23',
+      arrivalTime : '08:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
 
+    }, 
+  },
+  '3' : {
+    id : '3',
+    name : 'Krishnamurthy V Varanasi',
+    mobile : 9440012295,
+    staffCode : 6826,
+    pfNo : 386244,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {
+      ecName : 'Varanasi Phani',
+      ecNumber : 9160500445,
+      ecRelation : 'Son', 
+    },
+    arrivalDetails : {
+      arrivalDate : '25-02-23',
+      arrivalTime : '10:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
 
-let users = {
-  sarahedo: {
-    id: 'sarahedo',
-    dealer: 'N',
-    email: 'sarahedo@gmail.com',
-    mobile: '9876543210',
-    name: 'Sarah Edo',
-    avatarURL: 'https://tylermcginnis.com/would-you-rather/sarah.jpg',
-    pets: [
-      '8xf0y6ziyjabvozdd253nd',
-      '6ni6ok3ym7mf1p33lnez',
-      'am8ehyc8byjqgar0jgpub9'
-    ]
+    }, 
   },
-  tylermcginnis: {
-    id: 'tylermcginnis',
-    dealer: 'N',
-    email: 'tylermcginnis@gmail.com',
-    mobile: '9876543211',
-    name: 'Tyler McGinnis',
-    avatarURL: 'https://tylermcginnis.com/would-you-rather/tyler.jpg',
-    pets: [
-      'vthrdm985a262al8qx3do',
-      'xj352vofupe1dqz9emx13r'
-    ]
+  '4' : {
+    id : '4',
+    name : 'Ravi Chander',
+    mobile : 9885856210,
+    staffCode : null,
+    pfNo : null,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {},
+    arrivalDetails : {
+      arrivalDate : '24-02-23',
+      arrivalTime : '07:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
+
+    }, 
   },
-  johndoe: {
-    id: 'johndoe',
-    dealer: 'N',
-    name: 'John Doe',
-    email: 'johndoe@gmail.com',
-    mobile: '9876543212',
-    avatarURL: 'https://tylermcginnis.com/would-you-rather/dan.jpg',
-    pets: []
+  '5' : {
+    id : '5',
+    name : 'Y.Tripuramba',
+    mobile : 9246545149,
+    staffCode : 2888,
+    pfNo : 281856,
+    gender : 'F',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {
+      ecName : 'Mrs Aishwarya',
+      ecNumber : 9880933044,
+      ecRelation : 'Daughter', 
+    },
+    arrivalDetails : {
+      arrivalDate : '25-02-23',
+      arrivalTime : '05:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
+
+    }, 
   },
-  jonnyburger: {
-    id: 'jonnyburger',
-    dealer: 'Y',
-    email: 'jonnyburger@gmail.com',
-    mobile: '9876543213',
-    name: 'Jonny Burger',
-    avatarURL: 'https://tylermcginnis.com/would-you-rather/sarah.jpg',
-    pets: [
-      'jp125vofupe1dqz7emx13r',
-      'pdvmrdm985a278al8qx3do',
-      '6bkvv6ok3ym7mf1p33lnez',
-      'loxhs1bqm25b708cmbf3g'
-    ]
-  }
+  '6' : {
+    id : '6',
+    name : 'N.Ramgopal Rao',
+    mobile : 9177673339,
+    staffCode : 9790,
+    pfNo : 457332,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {
+      ecName : 'N Shobha Devi',
+      ecNumber : 9704143338,
+      ecRelation : 'Wife', 
+    },
+    arrivalDetails : {
+      arrivalDate : '25-02-23',
+      arrivalTime : '05:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
+
+    }, 
+  },
+  '7' : {
+    id : '7',
+    name : 'NSN Reddy',
+    mobile : 9490213002,
+    staffCode : 6507,
+    pfNo : 371304,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {},
+    arrivalDetails : {
+      arrivalDate : '24-02-23',
+      arrivalTime : '07:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
+
+    }, 
+  },
+  '8' : {
+    id : '8',
+    name : 'S.Krishna Kumar',
+    mobile : 7032458383,
+    staffCode : 3168,
+    pfNo : 294078,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {
+      ecName : 'Dr S Dinesh',
+      ecNumber : 9849970179,
+      ecRelation : 'Son', 
+    },
+    arrivalDetails : {
+      arrivalDate : '25-02-23',
+      arrivalTime : '05:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
+
+    }, 
+  },
+  '9' : {
+    id : '9',
+    name : 'A J Rama Rao',
+    mobile : 9849141424,
+    staffCode : 3105,
+    pfNo : 293298,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {
+      ecName : 'Sushmitha',
+      ecNumber : 9004220814,
+      ecRelation : 'Daughter', 
+    },
+    arrivalDetails : {
+      arrivalDate : '25-02-23',
+      arrivalTime : '05:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
+
+    }, 
+  },
+  '10' : {
+    id : '10',
+    name : 'K.Ramchander',
+    mobile : 9849205255,
+    staffCode : 7071,
+    pfNo : 387714,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    arrivalDetails : {
+      arrivalDate : '24-02-23',
+      arrivalTime : '07:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
+
+    }, 
+  },
+  '11' : {
+    id : '11',
+    name : 'N V Ramana',
+    mobile : 9848444635,
+    staffCode : 13092,
+    pfNo : 555348,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {
+      ecName : 'Dr Phanisri',
+      ecNumber : 7936876635,
+      ecRelation : 'Daughter', 
+    },
+    arrivalDetails : {
+      arrivalDate : '25-02-23',
+      arrivalTime : '05:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
+
+    }, 
+  },
+  '12' : {
+    id : '12',
+    name : 'K.Ramprasad',
+    mobile : 9949986611,
+    staffCode : 9823,
+    pfNo : 459252,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {
+      ecName : 'K Swathi',
+      ecNumber : 9951139439,
+      ecRelation : 'Daughter', 
+    },
+    arrivalDetails : {
+      arrivalDate : '25-02-23',
+      arrivalTime : '05:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
+
+    }, 
+  },
+  '13' : {
+    id : '13',
+    name : 'Kruttiventi Ravikumar',
+    mobile : 9866270266,
+    staffCode : 9137,
+    pfNo : 432696,
+    gender : 'M',
+    role : 'Delegate',
+    spouseAccompanying : 'N',
+    paymentDetails : {},
+    emergencyDetails : {
+      ecName : 'K Tejaswi',
+      ecNumber : 9966883325,
+      ecRelation : 'Son', 
+    },
+    arrivalDetails : {
+      arrivalDate : '25-02-23',
+      arrivalTime : '05:00',
+    },
+    departureDetails : {
+      departureDate : '27-02-23',
+      departueTime : '17:00',
+    },
+    stayDetails : {
+
+    }, 
+  },
 }
 
 let pets = {

@@ -23,10 +23,6 @@ class Event extends React.Component {
         <p className='event-short-desc'>
         {this.event.description.length>150 ? this.event.description.substring(0,150) : this.event.description}
         <Link to={`/event/${this.event.id}`}>...view more</Link>
-        <button
-            onClick={(e)=>this.viewPoll(e,this.event.id)}>
-            View Poll
-          </button>
         </p>
       </div>
     )
