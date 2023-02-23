@@ -25,7 +25,7 @@ class EventDetails extends Component {
               <div className='event-users-registered'>
                 <h4 className='reg-user-heading'>Registered Users</h4>
                 <div className='user-table-header'>
-                  <div className='user-details-column'>Name</div>
+                  <div className='user-details-column-header-name'>Name</div>
                   <div className='user-details-column'>Staff Number</div>
                   <div className='user-details-column'>Mobile Number</div>
                   <div className='user-details-column'>Gender</div>

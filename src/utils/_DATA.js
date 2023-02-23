@@ -32,11 +32,9 @@ let users = {
     },
     departureDetails : {
       departureDate : '28-02-23',
-      departueTime : '08:00',
+      departureTime : '08:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null,  
   },
   '2' : {
     id : '2',
@@ -59,11 +57,9 @@ let users = {
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null, 
   },
   '3' : {
     id : '3',
@@ -86,11 +82,9 @@ let users = {
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null,  
   },
   '4' : {
     id : '4',
@@ -102,18 +96,16 @@ let users = {
     role : 'Delegate',
     spouseAccompanying : 'N',
     paymentDetails : {},
-    emergencyDetails : {},
+    emergencyDetails : null,
     arrivalDetails : {
       arrivalDate : '24-02-23',
       arrivalTime : '07:00',
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null,  
   },
   '5' : {
     id : '5',
@@ -136,11 +128,9 @@ let users = {
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null, 
   },
   '6' : {
     id : '6',
@@ -163,11 +153,9 @@ let users = {
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null,  
   },
   '7' : {
     id : '7',
@@ -179,18 +167,16 @@ let users = {
     role : 'Delegate',
     spouseAccompanying : 'N',
     paymentDetails : {},
-    emergencyDetails : {},
+    emergencyDetails : null,
     arrivalDetails : {
       arrivalDate : '24-02-23',
       arrivalTime : '07:00',
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null,  
   },
   '8' : {
     id : '8',
@@ -213,11 +199,9 @@ let users = {
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null,  
   },
   '9' : {
     id : '9',
@@ -240,11 +224,9 @@ let users = {
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null, 
   },
   '10' : {
     id : '10',
@@ -256,17 +238,16 @@ let users = {
     role : 'Delegate',
     spouseAccompanying : 'N',
     paymentDetails : {},
+    emergencyDetails : null,
     arrivalDetails : {
       arrivalDate : '24-02-23',
       arrivalTime : '07:00',
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null, 
   },
   '11' : {
     id : '11',
@@ -289,11 +270,9 @@ let users = {
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null, 
   },
   '12' : {
     id : '12',
@@ -316,11 +295,9 @@ let users = {
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null, 
   },
   '13' : {
     id : '13',
@@ -343,11 +320,9 @@ let users = {
     },
     departureDetails : {
       departureDate : '27-02-23',
-      departueTime : '17:00',
+      departureTime : '17:00',
     },
-    stayDetails : {
-
-    }, 
+    stayDetails : null, 
   },
 }
 
