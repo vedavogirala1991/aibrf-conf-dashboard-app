@@ -1724,7 +1724,7 @@ ul {
 
 .user-details-table-header {
   display: flex;
-  font-weight: bold;
+  font-weight: 500;
   margin-left: 30px;
   margin-right: -40px;
   padding-left: 20px;
@@ -1754,6 +1754,10 @@ ul {
 
 .more-details-section {
   flex : 1;
+}
+
+.bold-details {
+  font-weight: 500;
 }
 
 .emergency-details {
