@@ -326,19 +326,17 @@ let users = {
   },
 }
 
-function generateUID () {
-  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
-}
+// function generateUID () {
+//   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+// }
 
 export function _getUsers () {
-  console.log('_getUsers', users);
   return new Promise((res, rej) => {
     setTimeout(() => res({...users}), 1000)
   })
 }
 
 export function _getEvents () {
-  console.log('_getEvents', events);
   return new Promise((res, rej) => {
     setTimeout(() => res({...events}), 1000)
   })

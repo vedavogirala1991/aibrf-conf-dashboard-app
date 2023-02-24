@@ -30,10 +30,7 @@ class Event extends React.Component {
 }
 
 const mapStateToProps = ({users,authedUser,events},props) => {
-  console.log('Users Events : ',users)
-  console.log('Events events : ',events)
   const id = props.id
-  console.log('Single Event : ',props.id)
   //const petIds = petIds ? Object.keys(pets).filter((id) => petIds.includes(id)) : null
   return {
     event :  formatEvent(events[id]),

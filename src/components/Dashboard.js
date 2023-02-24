@@ -41,10 +41,7 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = ({authedUser, users, pets}) => {
-  console.log('users :: ',users)
   const petIds = authedUser ? users[authedUser].pets : null
-  console.log('authedUser :: ',authedUser)
-  console.log('Dashboard petids :: ',petIds)
   return {
     authedUser,
     users,

@@ -3,27 +3,12 @@ import {connect} from 'react-redux'
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Nv = styled.nav`
-background: #161616;
-height: 150px;
-display: flex;
-justify-content: space-between;
-/*padding: 0.2rem calc((100vw - 1000px) / 2);*/
-z-index: 12;
-/* Third Nav */
-/* justify-content: flex-start; */
-`;
-
 const NvLink = styled(Link)`
 color: #808080;
-display: flex;
 align-items: center;
 text-decoration: none;
 padding: 0 1rem;
-height: 100%;
-width: 80px;
 cursor: pointer;
-margin-top: 25px;
 font-size: 20px;
 &.active {
   color: #fff;
@@ -34,20 +19,6 @@ font-size: 20px;
   font-weight: bold;
 }
 `;
-
-
-const NavMenu = styled.div`
-display: flex;
-align-items: center;
-margin-left: 90px;
-margin-right: -24px;
-white-space: nowrap;
-// @media screen and (max-width: 768px) {
-// 	display: none;
-// }
-`;
-
-
 
 class Nav extends Component {
   render () {
@@ -60,22 +31,47 @@ class Nav extends Component {
             <p className='aibrfconf-title'>Conference Dashboard</p>
           </div>
         </div>
+        <div className='top-nav-empty-section'></div>
+        <div className='top-nav-empty-section'></div>
         <div className='top-nav-section2'>
+          <NvLink
+          to='/home'
+            activeStyle={{
+              fontWeight: 'bold',
+              color: 'white'
+            }}>
           Home
+          </NvLink>
         </div>
         <div className='top-nav-section2'>
+          <NvLink
+          to='/about'
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'white'
+          }}>
           About 
+          </NvLink>
         </div>
         <div className='top-nav-section2'>
+          <NvLink
+            to='/register'
+            activeStyle={{
+              fontWeight: 'bold',
+              color: 'white'
+            }}>
           Register for Events
+          </NvLink>
         </div>
         <div className='top-nav-section3'>
           {this.props.username==null ?
-            <Link className='user-logout' to='/' exact activeClassName='active'>
-            Sign in 
-            </Link> : 
-            <div>
-              <span className='username'>{username}</span>
+            <div className='sign-in-user-section'>
+              <Link className='nav-sign-in-btn' to='/signin' exact activeClassName='active'>
+                Sign in 
+              </Link> 
+            </div> : 
+            <div className='logged-in-user'>
+              <p>Logged in as <span className='username'>{username}</span> </p>
               <Link className='user-logout' to='/' exact activeClassName='active'>
                 Logout
               </Link>
@@ -88,8 +84,6 @@ class Nav extends Component {
 }
 
 const mapStateToProps = ({ users,authedUser }) => {
-  console.log('Nav :: users',users)
-  console.log('Nav :: authedUser',authedUser)
   return {
     username: authedUser
       ? users[authedUser].name

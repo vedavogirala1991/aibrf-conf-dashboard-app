@@ -1,8 +1,5 @@
 import React, {Component} from 'react'
 import Events from './Events'
-import {connect} from 'react-redux'
-
-
 
 class Home extends Component {
   

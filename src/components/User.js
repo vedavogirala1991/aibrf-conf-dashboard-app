@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 import {connect} from 'react-redux'
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import { formatTime } from '../utils/helpers'
-import {Link} from 'react-router-dom'
+//import {Link} from 'react-router-dom'
 
 const User = (props) => {
 
   const user = props.user
   const [toggle, setToggle] = useState(false)
 
-  const viewPoll = (e,id) => {
-    e.preventDefault()
-    // this.props.history.push(`/event/${id}`)
-  }
+  // const viewPoll = (e,id) => {
+  //   e.preventDefault()
+  //   // this.props.history.push(`/event/${id}`)
+  // }
 
   return (
     <div className='user-short-details'>
@@ -63,10 +63,7 @@ const User = (props) => {
 }
 
 const mapStateToProps = ({users,authedUser,events},props) => {
-  console.log('Users Events : ',users)
-  console.log('Events events : ',events)
   const id = props.id
-  console.log('Single Event : ',props.id)
   //const petIds = petIds ? Object.keys(pets).filter((id) => petIds.includes(id)) : null
   return {
     user :  users[id] ? users[id] : null,

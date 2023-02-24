@@ -50,12 +50,8 @@ class EventDetails extends Component {
 }
 
 const mapStateToProps = ({users,authedUser,events},props) => {
-  console.log('Users Events : ',users)
-  console.log('Events events : ',events)
   const {id} = useParams()
-  console.log('Event id : ',id)
   const regUserIds = events[id].registeredUsers
-  console.log('regUserIds id : ',regUserIds)
   return {
     event : events[id] ? formatEvent(events[id]) : null,
     regUserIds,

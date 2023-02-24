@@ -4,7 +4,6 @@ import Event from './Event'
 
 const Events = (props) => {
   const eventIds = props.eventIds
-  console.log('Event ID : ',eventIds)
     
   if(!eventIds || eventIds.length===0) {
     let emptyText = 'There are no planned upcoming events'
@@ -31,8 +30,6 @@ const Events = (props) => {
 }
 
 const mapStateToProps = ({users,authedUser,events}) => {
-  console.log('Users Events : ',users)
-  console.log('Events events : ',events)
   //const petIds = petIds ? Object.keys(pets).filter((id) => petIds.includes(id)) : null
   return {
     eventIds :  events ? Object.keys(events) : null,

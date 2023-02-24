@@ -477,7 +477,13 @@ ul {
 
 .user-logout {
   color: white;
-  padding: 10px;
+  margin-top: 45px;
+  margin-right: 50px;
+  padding: 10px 10px 10px 0px;
+}
+
+.loggedin-text {
+  margin-top: -20px;
 }
 
 .user-actions {
@@ -1777,17 +1783,54 @@ ul {
   flex : 1;
   color: #808080;
   margin-top: 80px;
-  margin-left: 100px;
+  margin-left: -80px;
   font-weight: bold;
   vertical-align: bottom;
+  white-space: nowrap;
+}
+
+.top-nav-empty-section {
+  flex : 1;
+  color: #808080;
+  margin-top: 80px;
+  margin-left: -100px;
+  font-weight: bold;
+  vertical-align: bottom;
+  white-space: nowrap;
 }
 
 .top-nav-section3 {
   flex : 1;
   color: #808080;
-  margin-top: 80px;
+  margin-top: 40px;
   margin-left: 20px;
+  width: 300px;
   vertical-align: bottom;
+}
+
+.nav-sign-in-btn {
+  border-radius: 4px;
+  background: #ff7f27;
+  padding: 10px 22px;
+  margin-top: 60px;
+  margin-right: 60px;
+  color: #000000;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.logged-in-user {
+  margin-top: 5px;
+  display: flex;
+}
+
+.sign-in-user-section {
+  margin-top: -30px;
+  margin-left: 30px;
+  display: flex;
 }
 
 .emergency-details {
